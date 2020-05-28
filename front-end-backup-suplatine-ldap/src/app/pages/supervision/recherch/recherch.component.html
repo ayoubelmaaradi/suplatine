@@ -1,0 +1,49 @@
+
+<nb-card>
+  <nb-card-header>
+      Filtrage des traitements
+    <button (click)="search()" class="fa-pull-right" outline nbButton> Search</button>
+  </nb-card-header>
+  <nb-card-body>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="label">Process name</label>
+        <input [(ngModel)]="processNAme" type="text" nbInput fullWidth fieldSize="medium"  placeholder="Process name">
+      </div>
+      <div class="col-md-3">
+        <label class="label">Start date</label>
+        <input [(ngModel)]="dateStart" type="date" nbInput fullWidth fieldSize="medium"  placeholder="Start date">
+      </div>
+      <div class="col-md-3">
+        <label class="label">End date</label>
+        <input [(ngModel)]="dateEnd"  type="date" nbInput fullWidth fieldSize="medium"  placeholder="End date">
+      </div>
+      <div class="col-md-3">
+        <label class="label">Id technique</label>
+        <input [(ngModel)]="idTech" type="text" nbInput fullWidth fieldSize="medium"  placeholder="Id technique">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-3">
+        <label class="label">Id Fonctionnel</label>
+        <input [(ngModel)]="idFun" type="text" nbInput fullWidth fieldSize="medium"  placeholder="Id technique">
+      </div>
+      <div class="col-md-3">
+        <label class="label">Status</label>
+        <input [(ngModel)]="status" type="text" nbInput fullWidth fieldSize="medium"  placeholder="Status">
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>
+<br>
+<nb-card>
+  <nb-card-header>
+    Smart Table
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>
